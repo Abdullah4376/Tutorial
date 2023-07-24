@@ -14,4 +14,4 @@ Promise.race([
     recordVideo3
 ]).then((message) => {
     console.log(message);
-})
+});
