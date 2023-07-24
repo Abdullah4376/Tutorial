@@ -1,3 +1,17 @@
-console.log('config.js');
+const recordVideo1 = new Promise((resolve, reject) => {
+    resolve('Video 1 Recorded!')
+})
+const recordVideo2 = new Promise((resolve, reject) => {
+    resolve('Video 2 Recorded!')
+})
+const recordVideo3 = new Promise((resolve, reject) => {
+    resolve('Video 3 Recorded!')
+})
 
-console.log('Version 1');
+Promise.race([
+    recordVideo1,
+    recordVideo2,
+    recordVideo3
+]).then((message) => {
+    console.log(message);
+})
